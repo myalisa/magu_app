@@ -1,1 +1,9 @@
-_strain.json.jb
+{
+  id: strain.id,
+  name: strain.name,
+  category_id: strain.category_id,
+  thc_percentage: strain.thc_percentage,
+  cbd_percentage: strain.cbd_percentage,
+  description: strain.description,
+  effects: strain.effects
+}

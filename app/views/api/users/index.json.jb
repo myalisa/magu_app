@@ -1,1 +1,2 @@
-index.json.jb
+
+  render partial: "user.json.jb", locals:{user: user}

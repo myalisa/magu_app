@@ -5,8 +5,8 @@ class CreateStrains < ActiveRecord::Migration[6.0]
       t.integer :category_id
       t.integer :thc_percentage
       t.integer :cbd_percentage
-      t.string :description
-      t.string :effects
+      t.text :description
+      t.text :effects
 
       t.timestamps
     end

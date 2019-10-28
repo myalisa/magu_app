@@ -3,7 +3,7 @@ class CreateSymptoms < ActiveRecord::Migration[6.0]
     create_table :symptoms do |t|
       t.string :name
       t.integer :category_id
-      t.string :treatment
+      t.text :treatment
 
       t.timestamps
     end

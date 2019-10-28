@@ -1,1 +1,4 @@
-_category.json.jb
+{
+  id: category.id,
+  name: category.name,
+}

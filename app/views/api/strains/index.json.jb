@@ -1,1 +1,1 @@
-index.json.jb
+render partial: "strain.json.jb", locals:{strain: strain}

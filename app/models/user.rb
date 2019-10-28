@@ -1,8 +1,9 @@
 class User < ApplicationRecord
   has_secure_password
-  has_many :symptoms
-  has_one :category
-  has_many :strains, through: :category
+  has_many :user_symptoms
+  has_many :symptoms, through: :user_symptoms
+  has_many :categories, through: :symptoms
+  has_many :strains, through: :categories
   
   
 end

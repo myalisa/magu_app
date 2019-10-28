@@ -1,1 +1,6 @@
-_user.json.jb
+{
+  id: user.id,
+  name: user.name,
+  email: user.email,
+  address: user.address
+}
