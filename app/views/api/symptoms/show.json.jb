@@ -1,1 +1,1 @@
-show.json.jb
+render partial: "symptom.json.jb", locals: {symptom: @symptom}

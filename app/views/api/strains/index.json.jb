@@ -1,1 +1,3 @@
-render partial: "strain.json.jb", locals:{strain: strain}
+@strains.map do |strain|
+  render partial: "strain.json.jb", locals: {strain: strain}
+end

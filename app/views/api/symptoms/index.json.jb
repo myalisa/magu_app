@@ -1,1 +1,3 @@
-render partial: "symptom.json.jb", locals:{symptom: symptom}
+@symptoms.map do |symptom|
+  render partial: "symptom.json.jb", locals: {symptom: symptom}
+end

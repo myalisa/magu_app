@@ -1,1 +1,3 @@
-render partial: "category.json.jb", locals:{category: category}
+@categories.map do |category|
+  render partial: "category.json.jb", locals: {category: category}
+end

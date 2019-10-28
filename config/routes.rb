@@ -2,15 +2,17 @@ Rails.application.routes.draw do
   namespace :api do
     post '/users' => 'users#create'
 
-    # post '/symptoms' => 'symptoms#create'
-    # get '/symptoms' => 'symptoms#index'
-    # get '/symptoms/:id' => 'symptoms#show'
+     post '/sessions' => 'sessions#create'
+
+    post '/symptoms' => 'symptoms#create'
+    get '/symptoms' => 'symptoms#index'
+    get '/symptoms/:id' => 'symptoms#show'
     # patch '/symptoms/:id' => 'symptoms#update'
     # delete '/symptoms/:id' => 'symptoms#destroy'
 
-    # post '/categories' => 'categories#create'
-    # get '/categories' => 'categories#index'
-    # get '/categories/:id' => 'categories#show'
+    post '/categories' => 'categories#create'
+    get '/categories' => 'categories#index'
+    get '/categories/:id' => 'categories#show'
     # patch '/categories/:id' => 'categories#update'
     # delete '/categories/:id' => 'categories#destroy'
 

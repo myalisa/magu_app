@@ -2,5 +2,5 @@
   id: symptom.id,
   name: symptom.name,
   category_id: symptom.category_id,
-  treatment: symptom.treatment,
+  treatment: symptom.treatment
 }

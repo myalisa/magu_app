@@ -1,4 +1,4 @@
 class UserSymptom < ApplicationRecord
-  belongs_to :users 
-  belongs_to :symptoms
+  belongs_to :user
+  belongs_to :symptom
 end
