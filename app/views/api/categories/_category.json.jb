@@ -1,10 +1,10 @@
 {
   id: category.id,
   name: category.name,
-  # formatted: {
-  #               symptoms: category.symptoms
-  #               },
-  # user_id: contact.user_id,
-  # groups: contact.groups
-  # }
+
+  strains: category.strains.map { |strain|
+    render partial: "api/strains/strain.json.jb", locals: {strain: strain}
+  }
+
+  
 }

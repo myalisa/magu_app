@@ -11,9 +11,24 @@ class Api::CategoriesController < ApplicationController
     render 'show.json.jb'
   end
 
-   def show
+  def show
     @category = Category.find(params[:id])
     render 'show.json.jb'
+  end
+
+  def update
+    @category = Category.find(params[:id])
+
+    @category.name = params[:name] || @category.name
+
+    @category.save
+    render 'show.json.jb'
+  end
+
+  def destroy
+    @category = Category.find(params[:id])
+    @category.destroy
+    render json: {message: "Successfully Destroyed Category"}
   end
 
 end

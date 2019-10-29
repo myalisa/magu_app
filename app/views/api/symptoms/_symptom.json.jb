@@ -2,5 +2,7 @@
   id: symptom.id,
   name: symptom.name,
   category_id: symptom.category_id,
-  treatment: symptom.treatment
+  treatment: symptom.treatment,
+
+  category: (render partial: "api/categories/category.json.jb", locals: {category: symptom.category})
 }

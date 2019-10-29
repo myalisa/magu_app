@@ -19,8 +19,29 @@ class Api::StrainsController < ApplicationController
   end
 
   def show
-     @strain = Strain.find(params[:id])
-     render 'show.json.jb'
-   end
+   @strain = Strain.find(params[:id])
+   render 'show.json.jb'
+  end
+
+  def update
+    @strain = Strain.find(params[:id])
+
+    @strain.name = params[:name] || @strain.name
+    @strain.category_id = params[:category_id] || @strain.category_id
+    @strain.thc_percentage = params[:thc_percentage] || @strain.thc_percentage
+    @strain.cbd_percentage = params[:cbd_percentage] || @strain.cbd_percentage
+    @strain.description = params[:description] || @strain.description
+    @strain.effects = params[:effects] || @strain.effects
+    
+
+    @strain.save
+    render 'show.json.jb'
+  end
+
+  def destroy
+    @strain = strain.find(params[:id])
+    @strain.destroy
+    render json: {message: "Successfully Destroyed Strain"}
+  end
 
 end
