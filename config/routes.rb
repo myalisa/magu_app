@@ -16,9 +16,9 @@ Rails.application.routes.draw do
     # patch '/categories/:id' => 'categories#update'
     # delete '/categories/:id' => 'categories#destroy'
 
-    # post '/strains' => 'strains#create'
-    # get '/strains' => 'strains#index'
-    # get '/strains/:id' => 'strains#show'
+    post '/strains' => 'strains#create'
+    get '/strains' => 'strains#index'
+    get '/strains/:id' => 'strains#show'
     # patch '/strains/:id' => 'strains#update'
     # delete '/strains/:id' => 'strains#destroy'
 

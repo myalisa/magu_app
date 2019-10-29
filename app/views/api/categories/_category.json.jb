@@ -1,4 +1,10 @@
 {
   id: category.id,
   name: category.name,
+  # formatted: {
+  #               symptoms: category.symptoms
+  #               },
+  # user_id: contact.user_id,
+  # groups: contact.groups
+  # }
 }
