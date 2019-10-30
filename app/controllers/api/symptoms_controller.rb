@@ -1,4 +1,10 @@
 class Api::SymptomsController < ApplicationController
+  def index
+    @symptoms = Symptom.all
+    render 'index.json.jb'
+    
+  end
+  
   def create
     @symptom = Symptom.new(
                           name: params[:name],
@@ -8,11 +14,6 @@ class Api::SymptomsController < ApplicationController
     render 'show.json.jb'
   end
 
-  def index
-    @symptoms = Symptom.all
-    render 'index.json.jb'
-    
-  end
 
   def show
      @symptom = Symptom.find(params[:id])

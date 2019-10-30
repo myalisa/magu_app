@@ -7,10 +7,25 @@ class User < ApplicationRecord
   has_many :categories, through: :symptoms
   has_many :strains, through: :categories
   
-  def curated_strains
-    user_symptoms #use logic to find the correct category_id based on intensity of the symptoms
+  def category_id_by_frequency
+   
 
-    # find category = Category.find(category_id)
-    # category.strains
+    cat_ids = categories.pluck(:id)
+    counts = {}
+    
+    cat_ids.each do |element|
+      if counts[element] # if it exists
+        counts[element] += 1 # change it
+      else # it doesn't exist
+        counts[element] = 1 # create it
+      end   
+    end
+    
+
+      
+      return counts # {1=>3, 3=>2}
+      
+      
   end
+
 end

@@ -2,5 +2,9 @@
   id: user.id,
   name: user.name,
   email: user.email,
-  address: user.address
+  address: user.address,
+  user_symptom: user.user_symptoms.all
+
 }
+
+
