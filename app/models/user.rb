@@ -22,10 +22,18 @@ class User < ApplicationRecord
     end
     
 
-      
-      return counts # {1=>3, 3=>2}
-      
-      
+    counts.length.times do
+       # counts  {1=>3, 3=>2}
+      if counts[1] > counts[2] && if counts[1] > counts[3]
+       return counts[1]
+      end
+
+      if counts[2] > counts[1] && if counts[2] > counts[3]
+        return counts[2]
+    end
   end
+      
+      
+  
 
 end
