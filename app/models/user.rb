@@ -8,32 +8,42 @@ class User < ApplicationRecord
   has_many :strains, through: :categories
   
   def category_id_by_frequency
-   
-
+  
     cat_ids = categories.pluck(:id)
     counts = {}
     
     cat_ids.each do |element|
-      if counts[element] # if it exists
-        counts[element] += 1 # change it
-      else # it doesn't exist
-        counts[element] = 1 # create it
+      if counts[element] 
+        counts[element] += 1 
+      else 
+        counts[element] = 1 
       end   
     end
     
+    
 
-    counts.length.times do
-       # counts  {1=>3, 3=>2}
-      if counts[1] > counts[2] && if counts[1] > counts[3]
-       return counts[1]
-      end
-
-      if counts[2] > counts[1] && if counts[2] > counts[3]
-        return counts[2]
+    greatest_count = 0
+    counts.each do |number, count|
+      greatest_count = count if count > greatest_count
     end
+
+    
+    greatest_cat_ids = []
+    counts.each do |number, count|
+      greatest_cat_ids << number if count == greatest_count
+    end
+
+    greatest_cat_ids
+  end 
+
+  def alternative_symptoms
+    count = category_id_by_frequency.count
+    if count > 1
+      Strain.where(category_id: 3)
+    elsif count == 1
+      Strain.where(category_id: category_id_by_frequency)
+    end
+    
   end
-      
-      
-  
 
 end
