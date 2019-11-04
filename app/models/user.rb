@@ -20,8 +20,6 @@ class User < ApplicationRecord
       end   
     end
     
-    
-
     greatest_count = 0
     counts.each do |number, count|
       greatest_count = count if count > greatest_count

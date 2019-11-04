@@ -14,6 +14,9 @@ Rails.application.routes.draw do
     patch '/symptoms/:id' => 'symptoms#update'
     delete '/symptoms/:id' => 'symptoms#destroy'
 
+    post '/user_symptoms' => 'user_symptoms#create'
+    get '/user_symptoms' => 'user_symptoms#index'
+
     post '/categories' => 'categories#create'
     get '/categories' => 'categories#index'
     get '/categories/:id' => 'categories#show'
