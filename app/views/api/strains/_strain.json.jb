@@ -7,4 +7,5 @@
   description: strain.description,
   effects: strain.effects,
   image_url: strain.image_url
+  
 }

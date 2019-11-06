@@ -58,3 +58,98 @@ UserSymptom.create!([
   {user_id: 2, symptom_id: 9},
   {user_id: 2, symptom_id: 10}
 ])
+
+strain = Strain.find_by(id:1)
+strain.image_url="/images/Category1/Valentine-X.jpg"
+strain.save 
+
+strain = Strain.find_by(id:2)
+strain.image_url="/images/Category1/Remedy.jpg"
+strain.save 
+
+strain = Strain.find_by(id:3)
+strain.image_url="/images/Category1/Doctor-Doctor.jpg"
+strain.save
+
+strain = Strain.find_by(id:4)
+strain.image_url="/images/Category1/Suzy-Q.jpg"
+strain.save
+
+strain = Strain.find_by(id:5)
+strain.image_url="/images/Category2/Girl-Scout-Cookies.jpg"
+strain.save
+
+strain = Strain.find_by(id:6)
+strain.image_url="/images/Category2/Skywalker-OG.jpg"
+strain.save
+
+strain = Strain.find_by(id:7)
+strain.image_url="/images/Category2/Hindu-Kush.jpg"
+strain.save
+
+strain = Strain.find_by(id:8)
+strain.image_url="/images/Category2/Northern-Lights.jpg"
+strain.save
+
+strain = Strain.find_by(id:9)
+strain.image_url="/images/Category3/In-The-Pines.jpg"
+strain.save
+
+strain = Strain.find_by(id:10)
+strain.image_url="/images/Category3/Harlequin.jpg"
+strain.save
+
+strain = Strain.find_by(id:11)
+strain.image_url="/images/Category3/Jamaican-Lion.jpeg"
+strain.save
+
+strain = Strain.find_by(id:12)
+strain.image_url="/images/Category3/RX.jpg"
+strain.save
+
+strain = Strain.find_by(id:13)
+strain.image_url="/images/Category1/ACDC.png"
+strain.save
+
+strain = Strain.find_by(id:14)
+strain.image_url="/images/Category1/GI001-Bud.jpg"
+strain.save
+
+strain = Strain.find_by(id:15)
+strain.image_url="/images/Category1/Cannatonic.jpg"
+strain.save
+
+strain = Strain.find_by(id:16)
+strain.image_url="/images/Category1/Blue-Jay-Way.jpg"
+strain.save
+
+strain = Strain.find_by(id:17)
+strain.image_url="/images/Category3/Sour-Tsunami.jpg"
+strain.save
+
+strain = Strain.find_by(id:18)
+strain.image_url="/images/Category1/Oracle.jpg"
+strain.save
+
+strain = Strain.find_by(id:19)
+strain.image_url="/images/Category3/Star-Tonic.jpg"
+strain.save
+
+strain = Strain.find_by(id:20)
+strain.image_url="/images/Category3/CBD-Shark.jpg"
+strain.save
+
+strain = Strain.find_by(id:21)
+strain.image_url="/images/Category2/Blue-Blood-bud.png"
+strain.save
+
+strain = Strain.find_by(id:22)
+strain.image_url="/images/Category3/The-Ox-Bud.jpg"
+strain.save
+
+strain = Strain.find_by(id:23)
+strain.image_url="/images/Category2/Pineapple-Sage.jpeg"
+strain.save
+
+
+
