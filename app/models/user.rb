@@ -40,8 +40,8 @@ class User < ApplicationRecord
       Strain.where(category_id: 3)
     elsif count == 1
       Strain.where(category_id: category_id_by_frequency)
+    else
+      []
     end
-    
   end
-
 end

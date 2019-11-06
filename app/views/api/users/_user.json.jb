@@ -3,7 +3,10 @@
   name: user.name,
   email: user.email,
   address: user.address,
-  user_symptom: user.user_symptoms.all
+  user_symptom: user.user_symptoms.all,
+  strains_by_symptoms: user.alternative_symptoms.map { |strain|
+    render partial: "api/strains/strain.json.jb", locals: {strain: strain}
+  }
 
 }
 
