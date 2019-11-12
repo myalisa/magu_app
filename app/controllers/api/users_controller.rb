@@ -22,12 +22,17 @@ class Api::UsersController < ApplicationController
 
   def show
     if params[:id] == "current"
-      @user = current_user
+      if current_user
+        @user = current_user
+         render 'show.json.jb'
+      else
+        render json: {message: "not logged in"}, status: :unauthorized
+      end
     else
      @user = User.find(params[:id])
+     render 'show.json.jb'
    end
    
-   render 'show.json.jb'
   end
 
   
