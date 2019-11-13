@@ -5,6 +5,5 @@
   strains: category.strains.map { |strain|
     render partial: "api/strains/strain.json.jb", locals: {strain: strain}
   }
-
   
 }
